@@ -357,9 +357,7 @@ body {
 }
 
 .real-checkbox:focus + .custom-checkbox {
-  border: 3px solid #83B3D3;
-  margin: -2.667px;
-  margin-right: 13.333px;
+  box-shadow: 0 0 0 3px #83B3D3
 
 }
 
@@ -403,9 +401,7 @@ body {
 }
 
 .real-radio:focus + .custom-radio {
-  border: 3px solid #83B3D3;
-  margin: -2.667px;
-  margin-right: 13.333px;
+  box-shadow: 0 0 0 3px #83B3D3
 }
 
 .custom-radio::before {

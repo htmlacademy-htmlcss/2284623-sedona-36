@@ -55,12 +55,16 @@ body {
 }
 
 .navigation-link {
+  display: block;
   font-family: "PT Sans Bold", sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
   text-decoration: none;
   color: #000000;
+  height: 100%;
+  padding: 20px 16px;
+  box-sizing: border-box;
 }
 
 .navigation-link-current {
@@ -72,17 +76,17 @@ body {
   position: absolute;
   height: 2px;
   background-color: rgba(117, 98, 87, 1);
-  top: 44px;
-  right: 0;
-  left: 0;
+  top: 63px;
+  right: 16px;
+  left: 16px;
   z-index: 10;
 }
 
-.navigation-link:hover {
+.navigation-link:not(.navigation-link-current):hover {
   opacity: 0.7;
 }
 
-.navigation-link:active {
+.navigation-link:not(.navigation-link-current):active {
   opacity: 0.4;
 }
 
@@ -163,10 +167,11 @@ body {
 
 }
 
-.navigation-item{
-  padding: 20px 16px;
+.navigation-item {
+  /* padding: 20px 16px; */
   line-height: 24px;
   font-size: 20px;
+  height: 100%;
 }
 
 .icon-search {
@@ -174,7 +179,7 @@ body {
   background-image: url("../images/icons/search.svg");
   background-repeat: no-repeat;
   background-position: center;
-  min-width: 20px;
+  min-width: 44px;
   min-height: 20px;
   padding: 22px 12px;
 }
@@ -185,7 +190,7 @@ body {
   background-image: url("../images/icons/like.svg");
   background-repeat: no-repeat;
   background-position: center;
-  min-width: 20px;
+  min-width: 44px;
   min-height: 20px;
   padding: 22px 12px;
 }
@@ -210,6 +215,7 @@ body {
 .advantages-list {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
 }
@@ -289,6 +295,7 @@ body {
 .banner {
   position: relative;
   height: 485px;
+  background-color: #5dc00cc7;
 }
 
 .welcome-background {
@@ -332,6 +339,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
   margin: 0;
   padding: 0;
   gap: 0;
@@ -429,8 +437,7 @@ body {
 }
 
 .transparent-button:focus {
-  border: 3px solid rgba(131, 179, 211, 1);
-  outline: none;
+  outline: 3px solid rgba(131, 179, 211, 1);
 }
 
 .transparent-button:hover, .breadcrumbs-item:hover {
@@ -493,10 +500,17 @@ body {
 
 .newsletter {
   color: #ffffff;
+  background-color: #615048;
   background-image: url("../images/Subscribe.jpg");
   background-repeat: no-repeat;
   text-align: center;
   padding: 96px 258px 104px;
+}
+
+.newsletter-inner {
+  color:#000000;
+  background-image: none;
+  background-color: #FFFFFF;
 }
 
 .newsletter-field {
@@ -519,11 +533,6 @@ body {
 .newsletter-form {
   display: flex;
   margin: 0 auto;
-}
-
-.newsletter-inner {
-  color:black;
-  background-image: none;
 }
 
 .newsletter-button {
@@ -616,6 +625,7 @@ body {
 
 .filters-background {
   color:#ffffff;
+  background-color: #615048;
   background-image: url("../images/background-filter.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -793,12 +803,12 @@ body {
   line-height: 21px;
   color: #333333;
   min-width: 292px;
-  max-height: 49px;
+  /* max-height: 49px; */
   margin-left: auto;
   margin-right: 70px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
-  padding: 14px 20px;
+  padding: 12px 20px;
   padding-right: 50px;
   appearance: none;
   overflow: hidden;
@@ -915,6 +925,7 @@ body {
   color: #333333;
   background-color: #F2F2F2;
   padding: 9px 22px 8px 23px;
+  border-radius: 4px;
 }
 
 .text-rating {
@@ -928,6 +939,7 @@ body {
   font-family: "PT Sans Bold", sans-serif;
   font-weight: 700;
   font-size: 24px;
+  /* Увеличено значение line-height до 32px для ровного браузерного фокуса */
   line-height: 28px;
 }
 

@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+    <link rel="icon" href="images/favicon.ico">
   </head>
   <body>
   <div class="wrapper">
@@ -170,12 +171,12 @@
           </svg>
       </a>
     </footer>
-  </div>
+
 
   <!-- Модальное окно -->
 
-  <div class="modal-container visually-hidden">
-    <div class="modal modal-search visually-hidden">
+  <div class="modal-container"></div>
+    <div class="modal modal-search">
       <button class="modal-close-button" type="button">
         <svg aria-hidden="true" focusable="false" width="15" height="15" viewBox="0 0 15 15">
           <path d="M14.4907 1.78279L13.1984 0.490479L7.49072 6.19817L1.78303 0.490479L0.490723 1.78279L6.19842 7.49048L0.490723 13.1982L1.78303 14.4905L7.49072 8.78279L13.1984 14.4905L14.4907 13.1982L8.78303 7.49048L14.4907 1.78279Z" fill="black"/>
@@ -187,7 +188,8 @@
         <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
           <div class="field-group date-group date-in">
             <label class="date-label" for="date-start">Дата Заезда:</label>
-            <input class="date-field modal-field" type="date" id="date-start" name="date-start" value="2020-04-27" required>
+            <!-- <input class="date-field modal-field" type="date" id="date-start" name="date-start" value="2020-04-27" required> -->
+            <input class="date-field modal-field" type="text" placeholder="27 апреля 2020" onfocus="(this.type='date')" onblur="(this.type='text')">
           </div>
           <div class="field-group date-group date-out">
             <label class="date-label" for="date-end">Дата Выезда:</label>
@@ -243,6 +245,6 @@
         </form>
       </section>
     </div>
-  </div>
+    </div>
   </body>
 </html>

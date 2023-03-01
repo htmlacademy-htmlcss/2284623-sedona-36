@@ -35,6 +35,7 @@ body {
   background-color:#FFFFFF;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
+  position: relative;
 }
 
 .visually-hidden {
@@ -230,6 +231,18 @@ body {
   width: 505px;
 }
 
+.block-description {
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  margin: 0 85px;
+  color: #333333;
+}
+
+.blue-block .block-description {
+  color: #FFFFFF;
+}
+
 .block-title-advantages {
   font-family: "PT Sans Bold", sans-serif;
   font-weight: 700;
@@ -285,11 +298,13 @@ body {
   display: inline-block;
   width: 230px;
   margin: 0;
+  color: #333333;
 }
 
 .advantages-text {
   margin: 0;
   margin-top: 20px;
+  color: #333333;
 }
 
 .banner {
@@ -332,6 +347,7 @@ body {
 .reasons-description {
   margin: 0;
   margin-top: 25px;
+  color:#333333;
 }
 
 .reasons-list {
@@ -476,13 +492,6 @@ body {
   margin-bottom: 62px;
 }
 
-.block-description {
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-  margin: 0 85px;
-}
-
 .search {
   text-align: center;
   padding: 96px 304px;
@@ -492,11 +501,8 @@ body {
   margin: 0;
   margin-top: 20px;
   margin-bottom: 54px;
+  color: #333333;
 }
-
-/* .search-modal {
-
-} */
 
 .newsletter {
   color: #ffffff;
@@ -775,7 +781,7 @@ body {
   z-index: 10;
   opacity: 0.3;
   top: 12px;
-  left: 106px;
+  right: 164px;
 }
 
 .form-price::after {
@@ -872,6 +878,7 @@ body {
   grid-area: type;
   text-align: start;
   margin: 0;
+  color: #333333;
 }
 .hotel-card-price {
   font-size: 18px;
@@ -880,6 +887,7 @@ body {
   grid-area: price;
   text-align: end;
   margin: 0;
+  color: #333333;
 
 }
 .hotel-card-button {
@@ -1259,15 +1267,22 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
+  z-index: 1000;
 }
 
 .modal {
-  position: relative;
+  position: absolute;
+  top: 406px;
+  left: 293px;
   margin: auto;
   padding: 64px 70px;
   background-color: #ffffff;
   box-sizing: border-box;
   z-index: 10000;
+}
+
+.modal-hidden {
+  display: none;
 }
 
 .modal-title {
@@ -1311,7 +1326,7 @@ body {
   background-color: #E6E6E6;
 }
 
-.modal-close-button:focus {
+.modal-close-button:focus-visible {
   background-color: #E6E6E6;
   outline: 3px solid #83B3D3;
 }
@@ -1378,7 +1393,7 @@ body {
   position: absolute;
   padding: 0 20px;
   color: rgba(255, 87, 87, 1);
-  bottom: -45%;
+  bottom: -25px;
   left: 137px;
   font-size: 16px;
   line-height: 21px;
@@ -1391,7 +1406,7 @@ body {
   position: absolute;
   padding: 0 20px;
   color: rgba(51, 51, 51, 1);
-  bottom: -45%;
+  bottom: -25px;
   left: 137px;
   font-size: 16px;
   line-height: 21px;
@@ -1490,6 +1505,7 @@ body {
   padding: 18px 0;
   font-size: 20px;
   line-height: 24px;
+  border-radius: 10px;
 }
 
 .info {
@@ -1520,8 +1536,9 @@ body {
   width: 19px;
   height: 9px;
   opacity: 0;
-  transition: 1s;
   top: 15px;
+  left: 11px;
+  transform: translateX(-50%);
 }
 
 [data-tooltip]:hover::before {
@@ -1538,7 +1555,8 @@ body {
   font-size: 16px;
   line-height: 20px;
   width: 256px;
-  left: -450%;
+  left: 11px;
+  transform: translateX(-50%);
   top: 15px;
   background: #333333;
   color: #ffffff;
@@ -1547,7 +1565,7 @@ body {
   border-radius: 10px;
   pointer-events: none;
   opacity: 0;
-  transition: 1s;
+  /* transition: 1s; */
   box-sizing: border-box;
  }
 

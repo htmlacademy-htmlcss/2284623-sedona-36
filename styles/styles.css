@@ -821,6 +821,11 @@ body {
   background-repeat: no-repeat;
   box-sizing: border-box;
   cursor: pointer;
+  background-color: #FFFFFF;
+}
+
+.select-control option {
+  background-color: #FFFFFF;
 }
 
 .hotel-results {
@@ -1192,6 +1197,7 @@ body {
   outline: 3px solid rgba(131, 179, 211, 1);
 }
 
+/* Убирает стрелочки у input number */
 input[type='number'] {
   -moz-appearance: textfield;
 }

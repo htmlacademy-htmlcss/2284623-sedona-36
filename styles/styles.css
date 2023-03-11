@@ -114,7 +114,7 @@ body {
   top: calc(50% - 10px/2 - 11px);
   z-index: 1;
   color: #ffffff;
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-weight: 400;
 }
 

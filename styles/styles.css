@@ -169,7 +169,6 @@ body {
 }
 
 .navigation-item {
-  /* padding: 20px 16px; */
   line-height: 24px;
   font-size: 20px;
   height: 100%;
@@ -204,7 +203,6 @@ body {
   box-sizing: border-box;
   margin: auto 0;
   padding: 8px 34px;
-  /* Обратить внимание */
   white-space: nowrap;
   align-items: center;
 }
@@ -809,7 +807,6 @@ body {
   line-height: 21px;
   color: #333333;
   min-width: 292px;
-  /* max-height: 49px; */
   margin-left: auto;
   margin-right: 70px;
   border: 2px solid #E5E5E5;
@@ -824,6 +821,11 @@ body {
   background-repeat: no-repeat;
   box-sizing: border-box;
   cursor: pointer;
+  background-color: #FFFFFF;
+}
+
+.select-control option {
+  background-color: #FFFFFF;
 }
 
 .hotel-results {
@@ -947,7 +949,7 @@ body {
   font-family: "PT Sans Bold", sans-serif;
   font-weight: 700;
   font-size: 24px;
-  /* Увеличено значение line-height до 32px для ровного браузерного фокуса */
+  /* Для ровного браузерного фокуса на элемента нужно увеличить значение line-height до 32px */
   line-height: 28px;
 }
 
@@ -1062,7 +1064,7 @@ body {
 }
 
 .sort-link:focus,
-.select-control:focus,
+.select-control:focus-visible,
 .select-control:hover {
   border-color:#68A2CA;
   outline: none;
@@ -1195,6 +1197,16 @@ body {
   outline: 3px solid rgba(131, 179, 211, 1);
 }
 
+/* Убирает стрелочки у input number */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
 .toggle-min {
   top: -8px;
   left: 0;
@@ -1213,14 +1225,6 @@ body {
 .catalog-filter-label {
   display: flex;
   margin-right: 5px;
-}
-
-.range-input::-webkit-outer-spin-button,
-.range-input::-webkit-inner-spin-button,
-.people-form::-webkit-outer-spin-button,
-.people-form::-webkit-inner-spin-button {
-  appearance: none;
-  margin: 0;
 }
 
 .range-input {
@@ -1271,9 +1275,7 @@ body {
 }
 
 .modal {
-  position: absolute;
-  top: 406px;
-  left: 293px;
+  position: relative;
   margin: auto;
   padding: 64px 70px;
   background-color: #ffffff;
@@ -1364,23 +1366,10 @@ body {
   background-color: #F2F2F2;
   border-radius: 4px;
   border: none;
-}
-
-.date-field::-webkit-calendar-picker-indicator {
-  background-image: url('../images/icons/calendar.svg');
+  background-image: url('/images/icons/calendar.svg');
+  background-position-x: 400px;
+  background-position-y: center;
   background-repeat: no-repeat;
-  background-position: right center;
-  cursor: pointer;
-}
-
-.date-field::-webkit-calendar-picker-indicator:focus-visible {
-  box-shadow: 0 0 0 3px #83B3D3;
-  border-radius: 4px;
-  outline: none;
-}
-
-.date-field::-webkit-calendar-picker-indicator:hover {
-  opacity: 0.5;
 }
 
 .date-group {
@@ -1501,7 +1490,7 @@ body {
 
 .searching-button {
   display: block;
-  width: inherit;
+  width: 100%;
   padding: 18px 0;
   font-size: 20px;
   line-height: 24px;
@@ -1565,7 +1554,6 @@ body {
   border-radius: 10px;
   pointer-events: none;
   opacity: 0;
-  /* transition: 1s; */
   box-sizing: border-box;
  }
 

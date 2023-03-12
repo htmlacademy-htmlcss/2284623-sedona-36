@@ -578,7 +578,6 @@ body {
   font-size: 60px;
   line-height: 78px;
   margin: 0;
-  margin-bottom: 8px;
 }
 
 .breadcrumbs {
@@ -588,7 +587,7 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
-  margin-bottom: 40px;
+  margin-bottom: 34px;
 }
 
 .breadcrumbs-item:not(:last-child)::after {
@@ -598,7 +597,6 @@ body {
   min-height: 20px;
   background-image: url("../images/icons/arrow-right.svg");
   background-repeat: no-repeat;
-  margin-left: 10px;
 }
 
 .breadcrumbs-item {
@@ -610,11 +608,14 @@ body {
 }
 
 .breadcrumbs-home {
+  position: relative;
   min-width: 13px;
-  min-height: 16px;
+  min-height: 15px;
+  padding: 8px 10px 10px 0;
   background-image: url("../images/icons/breadcrumbs-home.svg");
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: left center;
+
 }
 
 .breadcrumbs-home:hover {
@@ -928,19 +929,28 @@ body {
 .stars-area {
   grid-area: stars;
   height: 100%;
-  display: flex;
-  gap: 6px;
-  align-items: center;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-
 }
-.star {
-  background-image: url(../images/icons/star.svg);
-  background-repeat: no-repeat;
-  width: 18px;
-  height: 17px;
+
+.stars-four {
+  background: url("../images/icons/star.svg") center left/18px 17px no-repeat,
+              url("../images/icons/star.svg") 24px center/18px 17px no-repeat,
+              url("../images/icons/star.svg") 48px center/18px 17px no-repeat,
+              url("../images/icons/star.svg") 72px center/18px 17px no-repeat;
+}
+
+.stars-three {
+  background: url("../images/icons/star.svg") center left/18px 17px no-repeat,
+              url("../images/icons/star.svg") 24px center/18px 17px no-repeat,
+              url("../images/icons/star.svg") 48px center/18px 17px no-repeat;
+}
+
+.stars-two {
+  background: url("../images/icons/star.svg") center left/18px 17px no-repeat,
+              url("../images/icons/star.svg") 24px center/18px 17px no-repeat;
+}
+
+.stars-one {
+  background: url("../images/icons/star.svg") center left/18px 17px no-repeat;
 }
 
 .rating {

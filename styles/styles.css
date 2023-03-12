@@ -360,6 +360,11 @@ body {
   gap: 0;
 }
 
+.reason-image {
+  height: 100%;
+  object-fit: cover;
+}
+
 .reasons-item {
   background: rgba(131, 179, 211, 0.12);
   text-align: center;

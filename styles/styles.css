@@ -233,7 +233,8 @@ body {
   font-size: 18px;
   line-height: 21px;
   text-align: center;
-  margin: 0 85px;
+  display: block;
+  margin: 0;
   color: #333333;
 }
 
@@ -293,7 +294,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   text-align: center;
-  display: inline-block;
+  display: block;
   width: 230px;
   margin: 0;
   color: #333333;
@@ -352,15 +353,11 @@ body {
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
   grid-auto-rows: 1fr;
   margin: 0;
   padding: 0;
   gap: 0;
-}
-
-.reasons-item.blue-block {
-  grid-column: 1 / 4
 }
 
 .reasons-item {
@@ -369,13 +366,14 @@ body {
   display: flex;
   flex-direction: row;
   min-width: 400px;
-  margin: 0;
+  padding: 112.5px 85px;
+  box-sizing: border-box;
 }
 
 .reason-card {
-  margin: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
   position: relative;
 }
 
@@ -386,11 +384,20 @@ body {
   background-color: rgba(0, 0, 0, 0.3);;
   position: absolute;
   top: 86px;
-  left: 170px;
+}
+
+.reasons-item.blue-block {
+  grid-column: 1 / 4;
+  padding: 0;
+}
+
+.blue-block .reason-card {
+  padding: 102px 85px;
 }
 
 .blue-block .reason-card::after {
   background-color: rgba(255, 255, 255, 0.3);
+  top: 188px;
 }
 
 .gray-block {
@@ -485,8 +492,9 @@ body {
   line-height: 28px;
   text-transform: uppercase;
   max-width: 175px;
-  margin: auto;
   text-align: center;
+  display: block;
+  margin: 0;
   margin-bottom: 62px;
 }
 
@@ -509,6 +517,7 @@ body {
   background-repeat: no-repeat;
   text-align: center;
   padding: 96px 258px 104px;
+  background-size: cover;
 }
 
 .newsletter-inner {
@@ -559,13 +568,16 @@ body {
   margin-bottom: 54px;
 }
 
+.newsletter-inner .newsletter-description {
+  color: #333333;
+}
+
 .inner-header-title {
   font-family: "PT Sans Bold", sans-serif;
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
   margin: 0;
-  margin-bottom: 8px;
 }
 
 .breadcrumbs {
@@ -575,7 +587,7 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
-  margin-bottom: 40px;
+  margin-bottom: 34px;
 }
 
 .breadcrumbs-item:not(:last-child)::after {
@@ -585,7 +597,6 @@ body {
   min-height: 20px;
   background-image: url("../images/icons/arrow-right.svg");
   background-repeat: no-repeat;
-  margin-left: 10px;
 }
 
 .breadcrumbs-item {
@@ -597,11 +608,14 @@ body {
 }
 
 .breadcrumbs-home {
+  position: relative;
   min-width: 13px;
-  min-height: 16px;
+  min-height: 15px;
+  padding: 8px 10px 10px 0;
   background-image: url("../images/icons/breadcrumbs-home.svg");
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: left center;
+
 }
 
 .breadcrumbs-home:hover {
@@ -647,6 +661,7 @@ body {
 .catalog-filter {
   display: flex;
   gap: 70px;
+  flex-wrap: wrap;
 }
 
 /*Кастомные checkbox и radio */
@@ -856,6 +871,7 @@ body {
   column-gap: 20px;
   row-gap: 16px;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: max-content auto max-content max-content max-content;
   grid-template-areas:
       "image image"
       "link link"
@@ -871,6 +887,7 @@ body {
 
 .hotel-card-image-link {
   grid-area: image;
+  display: block;
 }
 
 .hotel-card-type {
@@ -912,19 +929,28 @@ body {
 .stars-area {
   grid-area: stars;
   height: 100%;
-  display: flex;
-  gap: 6px;
-  align-items: center;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-
 }
-.star {
-  background-image: url(../images/icons/star.svg);
-  background-repeat: no-repeat;
-  width: 18px;
-  height: 17px;
+
+.stars-four {
+  background: url("../images/icons/star.svg") center left/18px 17px no-repeat,
+              url("../images/icons/star.svg") 24px center/18px 17px no-repeat,
+              url("../images/icons/star.svg") 48px center/18px 17px no-repeat,
+              url("../images/icons/star.svg") 72px center/18px 17px no-repeat;
+}
+
+.stars-three {
+  background: url("../images/icons/star.svg") center left/18px 17px no-repeat,
+              url("../images/icons/star.svg") 24px center/18px 17px no-repeat,
+              url("../images/icons/star.svg") 48px center/18px 17px no-repeat;
+}
+
+.stars-two {
+  background: url("../images/icons/star.svg") center left/18px 17px no-repeat,
+              url("../images/icons/star.svg") 24px center/18px 17px no-repeat;
+}
+
+.stars-one {
+  background: url("../images/icons/star.svg") center left/18px 17px no-repeat;
 }
 
 .rating {
@@ -957,6 +983,8 @@ body {
   text-decoration: none;
   color: #000000;
   grid-area: link;
+  display: block;
+  text-align: start;
 }
 
 .number-phone {
@@ -1230,12 +1258,13 @@ input::-webkit-inner-spin-button {
 .range-input {
   font-family: "PT Sans Bold", sans-serif;
   font-weight: 700;
-  width: 103px;
-  padding: 12px 20px;
+  width: 143px;
+  padding: 12px 42px 12px 20px;
   background: #F2F2F2;
   border: none;
   font-size: 18px;
   line-height: 24px;
+  box-sizing: border-box;
   position: relative;
 }
 
@@ -1359,7 +1388,7 @@ input::-webkit-inner-spin-button {
 }
 
 .date-field {
-  padding: 12px 20px 12px 20px;
+  padding: 12px 60px 12px 20px;
   width: 440px;
   box-sizing: border-box;
   margin-left: auto;

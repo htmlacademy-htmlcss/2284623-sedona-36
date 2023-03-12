@@ -6,7 +6,7 @@
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
-    <link rel="icon" href="images/favicon.ico">
+    <link rel="icon" href="favicon.ico">
   </head>
 
   <body>
@@ -134,15 +134,14 @@
         <section class="newsletter">
           <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
           <p class="newsletter-description">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
-          <div class="newsletter-form">
-            <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-              <input class="newsletter-field field" placeholder="Ваш e-mail" type="email" name="newsletter-email"
-                id="newsletter-email" required>
-              <button class="newsletter-button button blue-button big-button" type="submit">
-                <span>Подписаться</span>
-              </button>
-            </form>
-          </div>
+          <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
+            <label for="newsletter-email" class="visually-hidden">Введите ваш e-mail.</label>
+            <input class="newsletter-field field" placeholder="Ваш e-mail" type="email" name="newsletter-email"
+              id="newsletter-email" required>
+            <button class="newsletter-button button blue-button big-button" type="submit">
+              <span>Подписаться</span>
+            </button>
+          </form>
         </section>
       </main>
       <footer class="page-footer">
@@ -209,11 +208,13 @@
             <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
               <div class="field-group date-group date-in">
                 <label class="date-label" for="date-start">Дата Заезда:</label>
-                <input class="date-field modal-field" type="text" id="date-start" name="date-start" placeholder="Укажите дату" value="27 апреля 2020" required>
+                <input class="date-field modal-field" type="text" id="date-start" name="date-start"
+                  placeholder="Укажите дату" value="27 апреля 2020" required>
               </div>
               <div class="field-group date-group date-out">
                 <label class="date-label" for="date-end">Дата Выезда:</label>
-                <input class="date-field modal-field" type="text" id="date-end" name="date-end" placeholder="Укажите дату" value="1 сентября 2023" required>
+                <input class="date-field modal-field" type="text" id="date-end" name="date-end"
+                  placeholder="Укажите дату" value="1 сентября 2023" required>
               </div>
               <div class="value-people-wrapper">
                 <div class="field-group value-people">
@@ -266,11 +267,12 @@
                   </div>
                 </div>
               </div>
-              <button class="button searching-button blue-button" type ="submit">Найти</button>
+              <button class="button searching-button blue-button" type="submit">Найти</button>
             </form>
           </section>
         </div>
       </div>
     </div>
   </body>
+
 </html>

@@ -6,7 +6,7 @@
     <title>Гостиницы Седоны</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
-    <link rel="icon" href="images/favicon.ico">
+    <link rel="icon" href="favicon.ico">
   </head>
 
   <body>
@@ -117,10 +117,10 @@
               <fieldset class="catalog-filter-group slider">
                 <legend class="catalog-filter-title">Стоимость, &#8381;:</legend>
                 <div class="form-price">
-                  <span class="visually-hidden">Минимальная цена.</span>
+                  <label for="min-price" class="visually-hidden">Минимальная цена.</label>
                   <input class="input-price-min range-input field" type="number" id="min-price" name="min-price"
                     value="0" step="100">
-                  <span class="visually-hidden">Максимальная цена.</span>
+                  <label for="max-price" class="visually-hidden">Максимальная цена.</label>
                   <input class="input-price-max range-input field" type="number" id="max-price" name="max-price"
                     value="9000" step="100">
                 </div>
@@ -178,12 +178,7 @@
               <span class="visually-hidden">
                 Рейтинг отеля 4 звезды.
               </span>
-              <ul class="stars-area">
-                <li class="star"></li>
-                <li class="star"></li>
-                <li class="star"></li>
-                <li class="star"></li>
-              </ul>
+              <span class="stars-area stars-four"></span>
               <div class="rating">
                 <p class="text-rating">Рейтинг: <span class="rating-number">8,5</span></p>
               </div>
@@ -201,12 +196,7 @@
               <span class="visually-hidden">
                 Рейтинг отеля 4 звезды.
               </span>
-              <ul class="stars-area">
-                <li class="star"></li>
-                <li class="star"></li>
-                <li class="star"></li>
-                <li class="star"></li>
-              </ul>
+              <span class="stars-area stars-four"></span>
               <div class="rating">
                 <p class="text-rating">Рейтинг: <span class="rating-number">9,2</span></p>
               </div>
@@ -224,11 +214,7 @@
               <span class="visually-hidden">
                 Рейтинг отеля 3 звезды.
               </span>
-              <ul class="stars-area">
-                <li class="star"></li>
-                <li class="star"></li>
-                <li class="star"></li>
-              </ul>
+              <span class="stars-area stars-three"></span>
               <div class="rating">
                 <p class="text-rating">Рейтинг: <span class="rating-number">6,9</span></p>
               </div>
@@ -246,10 +232,7 @@
               <span class="visually-hidden">
                 Рейтинг отеля 2 звезды.
               </span>
-              <ul class="stars-area">
-                <li class="star"></li>
-                <li class="star"></li>
-              </ul>
+              <span class="stars-area stars-two"></span>
               <div class="rating">
                 <p class="text-rating">Рейтинг: <span class="rating-number">5,0</span></p>
               </div>
@@ -282,15 +265,14 @@
         <section class="newsletter newsletter-inner">
           <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
           <p class="newsletter-description">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
-          <div class="newsletter-form">
-            <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-              <input class="newsletter-field field" placeholder="Ваш e-mail" type="email" name="newsletter-email"
-                id="newsletter-email" required>
-              <button class="newsletter-button button blue-button big-button" type="submit">
-                <span>Подписаться</span>
-              </button>
-            </form>
-          </div>
+          <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
+            <label for="newsletter-email" class="visually-hidden">Введите ваш e-mail.</label>
+            <input class="newsletter-field field" placeholder="Ваш e-mail" type="email" name="newsletter-email"
+              id="newsletter-email" required>
+            <button class="newsletter-button button blue-button big-button" type="submit">
+              <span>Подписаться</span>
+            </button>
+          </form>
         </section>
       </main>
       <footer class="page-footer">
@@ -340,4 +322,5 @@
       </footer>
     </div>
   </body>
+
 </html>
